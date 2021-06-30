@@ -6,6 +6,7 @@ resource "aws_iam_user" "users" {
     "tim",
     "sam",
     "ben",
+    "lisa" 
   ])
   tags = {
     Team = "DevOps"

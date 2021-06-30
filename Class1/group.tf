@@ -1,4 +1,9 @@
 resource "aws_iam_group" "developers" {
-  name = "wheel"
+  name = each.key  
   path = "/users/"
+  for_each = toset([
+    "sales",
+    "marketing",
+    "billing",
+  ])
 }

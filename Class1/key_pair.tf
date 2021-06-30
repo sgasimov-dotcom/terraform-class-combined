@@ -5,3 +5,11 @@ resource "aws_key_pair" "automation" {
       Name = "DevOps"
   }
 }
+
+resource "aws_key_pair" "automation2" {
+  key_name   = "automation2"
+  public_key = file("~/.ssh/id_rsa.pub")
+  tags = {
+      Name = "DevOps"
+  }
+}

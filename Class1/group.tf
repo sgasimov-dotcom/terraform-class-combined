@@ -5,5 +5,6 @@ resource "aws_iam_group" "developers" {
     "sales",
     "marketing",
     "billing",
+    "python"
   ])
 }

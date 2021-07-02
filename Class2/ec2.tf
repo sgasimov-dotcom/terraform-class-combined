@@ -7,8 +7,6 @@ resource "aws_key_pair" "class2" {
       Team = "DevOps"
   }
 }
-
-
 resource "aws_instance" "web" {
   ami           = "ami-0277b52859bac6f4b"
   instance_type = "t3.micro"
@@ -19,7 +17,7 @@ resource "aws_instance" "web" {
   key_name = aws_key_pair.class2.key_name
   user_data = file("user_data.sh")
   tags = {
-      Name = "Web"
+      Name = "Web ${count.index +1}"
       CreatedBy = "Engineer" 
       Team = "DevOps"
   }

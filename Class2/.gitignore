@@ -3,7 +3,7 @@
 **/.terraform.lock.hcl
 **/route53.tf 
 */route53.tf 
-
+route53.tf
 # .tfstate files
 *.tfstate
 *.tfstate.*

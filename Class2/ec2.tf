@@ -1,12 +1,3 @@
-resource "aws_key_pair" "class2" {
-  key_name   = "class2"
-  public_key = file("~/.ssh/id_rsa.pub")
-  tags = {
-      Name = "Web"
-      CreatedBy = "Engineer" 
-      Team = "DevOps"
-  }
-}
 resource "aws_instance" "web" {
   ami           = "ami-0277b52859bac6f4b"
   instance_type = "t3.micro"

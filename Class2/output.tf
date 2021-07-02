@@ -7,12 +7,12 @@ output "Password" {
   value = "W4I3sIx6njGqcF@WVRq3Ol4LpEvzaGQWhrTWX@rFM0LeBsdABQ"
 }
 
-output "AZ"  {
-  value  = aws_instance.web[0].availability_zone
+output "AZ" {
+  value = aws_instance.web[0].availability_zone
 }
 
 output "SomeOutput" {
-    value = <<EOF
+  value = <<EOF
 
         Machine1 has the following IP address   ${aws_instance.web[0].public_ip}
         Machine1 has the following ID           ${aws_instance.web[0].id}

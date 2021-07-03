@@ -16,14 +16,16 @@ data "aws_ami" "ubuntu" {
 
 
 
-output "centos" {
-  value = data.aws_ami.centos.id
-}
+data "aws_availability_zones" "all" {}
 
+output "AZ" {
+	value = data.aws_availability_zones.all.names[0]
+}
 
 
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
+  availability_zone = data.aws_availability_zones.all.names[0]
 }

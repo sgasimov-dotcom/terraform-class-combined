@@ -19,13 +19,13 @@ data "aws_ami" "ubuntu" {
 data "aws_availability_zones" "all" {}
 
 output "AZ" {
-	value = data.aws_availability_zones.all.names[0]
+  value = data.aws_availability_zones.all.names[0]
 }
 
 
 
 resource "aws_instance" "web" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
+  ami               = data.aws_ami.ubuntu.id
+  instance_type     = "t3.micro"
   availability_zone = data.aws_availability_zones.all.names[0]
 }

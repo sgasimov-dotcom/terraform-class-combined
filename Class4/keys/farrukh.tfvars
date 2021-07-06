@@ -1,5 +1,5 @@
-region     = "eu-west-2"
-key_name   = "automation"
+region     = "eu-west-1"
+key_name   = "farrukh"
 public_key = "~/.ssh/id_rsa.pub"
 
 

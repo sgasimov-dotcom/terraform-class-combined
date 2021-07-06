@@ -4,7 +4,7 @@ public_key = "~/.ssh/id_rsa.pub"
 
 
 key_tags = {
-  Name = Wordpress
-  Env  = Dev
-  Team = DevOps
+  Name = "Wordpress"
+  Env  = "Dev"
+  Team = "DevOps"
 }

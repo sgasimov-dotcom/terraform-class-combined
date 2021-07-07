@@ -20,6 +20,13 @@ variable "key_tags" {
   description = "Please provide your tags"
 }
 
+variable "instance_type" {
+  type        = string
+  description = "Please provide instance type"
+}
+
+
+
 
 // variable "AZ" {
 //     type = list 

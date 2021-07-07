@@ -6,3 +6,5 @@ key_tags = {
   Env  = "Dev"
   Team = "DevOps"
 }
+
+instance_type               = "t3.micro"  

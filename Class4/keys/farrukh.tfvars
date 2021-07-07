@@ -1,5 +1,5 @@
-key_name   = "farrukh"
-
+key_name      = "farrukh"
+instance_type = "t3.micro"
 
 key_tags = {
   Name = "Wordpress"
@@ -7,4 +7,3 @@ key_tags = {
   Team = "DevOps"
 }
 
-instance_type               = "t3.micro"  

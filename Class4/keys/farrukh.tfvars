@@ -8,5 +8,7 @@ key_tags = {
   Name = "Wordpress"
   Env  = "Dev"
   Team = "DevOps"
+  Quarter   = "1" 
+  Bill  =  "CFO"
 }
 

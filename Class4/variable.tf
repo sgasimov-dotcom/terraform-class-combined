@@ -26,6 +26,15 @@ variable "instance_type" {
 }
 
 
+# Sec group variables 
+
+variable "name" {}
+variable "description" {}
+variable "from_port" {}
+variable "to_port" {}
+variable "allowed_hosts" {}
+
+
 
 
 // variable "AZ" {

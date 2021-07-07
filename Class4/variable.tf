@@ -1,7 +1,7 @@
 variable "region" {
   type        = string
   description = "Please provide your region"
-  default = "eu-west-1"
+  default     = "eu-west-1"
 }
 
 variable "key_name" {
@@ -12,7 +12,7 @@ variable "key_name" {
 variable "public_key" {
   type        = string
   description = "Please provide your public_key"
-  default = "~/.ssh/id_rsa.pub"
+  default     = "~/.ssh/id_rsa.pub"
 }
 
 variable "key_tags" {

@@ -28,16 +28,15 @@ variable "instance_type" {
 
 # Sec group variables 
 
-variable "name" {}
+variable "sec_group_name" {}
 variable "description" {}
 variable "from_port" {}
 variable "to_port" {}
-variable "allowed_hosts" {}
+
+variable "allowed_hosts" {
+  type = list 
+  description = "Please provide list of IPs"
+}
 
 
 
-
-// variable "AZ" {
-//     type = list 
-//     description = "Please provide your AZs"
-// }

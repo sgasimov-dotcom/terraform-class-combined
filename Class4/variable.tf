@@ -34,7 +34,7 @@ variable "from_port" {}
 variable "to_port" {}
 
 variable "allowed_hosts" {
-  type = list 
+  type        = list(any)
   description = "Please provide list of IPs"
 }
 

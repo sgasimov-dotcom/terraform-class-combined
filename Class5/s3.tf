@@ -1,12 +1,5 @@
-resource "random_password" "password" {
-  length           = 16
-  special          = false
-  override_special = "_%@"
-}
-
-
-resource "aws_s3_bucket" "b" {
-  bucket = "my-tf-test-bucket-${random_password.password.result}"
+resource "aws_s3_bucket" "bucket" {
+  bucket = var.bucket_name
   acl    = "private"
 
   tags = {

@@ -3,8 +3,6 @@ resource "aws_kms_key" "mykey" {
   deletion_window_in_days = 10
 }
 
-
-
 resource "aws_s3_bucket" "bucket2" {
   bucket_prefix = "s3-class-with-evolve-cyber-"
   acl    = "private"
@@ -28,3 +26,13 @@ resource "aws_s3_bucket" "bucket2" {
   }
 }
 
+resource "aws_s3_bucket_object" "object" {
+  bucket = "s3-class-with-evolve-cyber-20210709014628599500000001"
+  key    = "new_object_key"
+  source = "/etc/passwd"
+
+  # The filemd5() function is available in Terraform 0.11.12 and later
+  # For Terraform 0.11.11 and earlier, use the md5() function and the file() function:
+  # etag = "${md5(file("path/to/file"))}"
+//   etag = filemd5("path/to/file")
+}

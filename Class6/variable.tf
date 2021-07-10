@@ -8,6 +8,6 @@ variable "public_cidr3" {}
 variable "private_cidr1" {}
 variable "private_cidr2" {}
 variable "private_cidr3" {}
-variable "farrukh_tags" {
+variable "tags" {
     type = map
 }

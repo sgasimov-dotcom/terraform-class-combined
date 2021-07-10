@@ -19,3 +19,15 @@ resource "aws_subnet" "private3" {
   availability_zone = "${var.region}c"
   tags = var.tags
 }
+
+resource "aws_eip" "main" {
+  vpc      = true
+  tags = var.tags
+}
+
+
+resource "aws_nat_gateway" "example" {
+  allocation_id = aws_eip.main.id
+  subnet_id     = aws_subnet.public1.id
+  tags = var.tags
+}

@@ -24,6 +24,7 @@ resource "aws_db_instance" "default" {
   name                 = "mydb"
   username             = "foo"
   password             = random_password.password.result
-  db_subnet_group_name = "default"
   parameter_group_name = "default.mysql5.7"
+  skip_final_snapshot  = true
+
 }

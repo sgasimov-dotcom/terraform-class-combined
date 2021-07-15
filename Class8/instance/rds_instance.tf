@@ -11,7 +11,7 @@ output "password" {
 
 
 resource "aws_ssm_parameter" "wordpress" {
-  name  = "/devops/us-east-1/passwords/wordpress"
+  name  = "/devops/us-east-2/passwords/wordpress"
   type  = "SecureString"
   value = random_password.password.result
 }

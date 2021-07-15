@@ -18,6 +18,8 @@ resource "aws_ssm_parameter" "wordpress" {
 
 
 
+
+
 resource "aws_db_instance" "default" {
   allocated_storage    = 10
   storage_type         = "gp2"
@@ -29,5 +31,5 @@ resource "aws_db_instance" "default" {
   password             = random_password.password.result
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
-  db_subnet_group_name        = "default"
+  db_subnet_group_name = aws_db_subnet_group.default.name
 }

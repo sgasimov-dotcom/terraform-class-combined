@@ -4,7 +4,7 @@
 **/route53.tf 
 */route53.tf 
 route53.tf 
-subnet_group.tf
+# subnet_group.tf
 # .tfstate files
 *.tfstate
 *.tfstate.*

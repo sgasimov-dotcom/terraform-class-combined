@@ -28,10 +28,19 @@ resource "aws_rds_cluster" "default" {
 }
 
 resource "aws_rds_cluster_instance" "cluster_instances" {
-	count = 2
+	count = 1
 	identifier = "aurora-cluster-demo-${count.index +1}"
 	cluster_identifier = aws_rds_cluster.default.cluster_identifier
 	instance_class = "db.r4.large"
 	engine_version = "5.6.10a"
 	engine = "aurora"
+}
+
+
+output "reader_endpoint" {
+    value = aws_rds_cluster.default.reader_endpoint
+}
+
+output "writer_endpoint" {
+    value = aws_rds_cluster.default.endpoint
 }

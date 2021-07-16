@@ -1,6 +1,7 @@
 resource "aws_security_group" "wordpress-db" {
   name        = "wordpress-db"
   description = "Allow Mysql traffic to wordpress"
+  vpc_id      = module.vpc.vpc
   ingress {
     description = "Allow mysql"
     from_port   = 3306

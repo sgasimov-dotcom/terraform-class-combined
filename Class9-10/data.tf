@@ -20,6 +20,6 @@ data "aws_ami" "image" {
   owners = ["099720109477"] # Canonical
 }
 
-output AMI_ID {
-    value = data.aws_ami.image.id
+output "AMI_ID" {
+  value = data.aws_ami.image.id
 }

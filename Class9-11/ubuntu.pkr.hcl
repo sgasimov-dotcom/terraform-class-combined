@@ -38,4 +38,11 @@ build {
   sources = [
     "source.amazon-ebs.ubuntu"
   ]
+  provisioner "shell" {
+  inline = [
+	"echo Installing Telnet",
+	"sudo apt-get install telnet -y",
+	"sudo apt update && sudo apt upgrade -y",
+    ]
+  }
 }

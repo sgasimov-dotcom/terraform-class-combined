@@ -7,7 +7,7 @@ route53.tf
 # .tfstate files
 *.tfstate
 *.tfstate.*
-
+terraform.auto.tfvars
 # Crash log files
 crash.log
 

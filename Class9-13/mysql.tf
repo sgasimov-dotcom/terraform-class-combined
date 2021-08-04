@@ -1,10 +1,10 @@
 resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
+  name     = "example-resources-mysql"
   location = "West Europe"
 }
 
 resource "azurerm_mysql_server" "example" {
-  name                = "example-mysqlserver"
+  name                = "example-mysqlserver-2"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 

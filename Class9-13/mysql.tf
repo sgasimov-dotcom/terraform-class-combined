@@ -3,16 +3,16 @@ resource "azurerm_resource_group" "example" {
   location = "West Europe"
 }
 
-
-resource "random_password" "passwordmysql" {
-	length = 5
-	special = false
-	override_special = "_%@"
+resource "random_string" "random" {
+  length           = 14
+  special          = false
+  override_special = "/@£$"
+  upper = false
 }
 
 
 resource "azurerm_mysql_server" "example" {
-  name                = "example-mysqlserver-2-${random_password.passwordmysql.result}"
+  name                = "example-mysqlserver-2-${random_string.random.result}"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
 
